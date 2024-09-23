@@ -1,0 +1,12 @@
+<div *ngIf="cat">
+    <!--ngModel is Angular's 2-way data binding syntax-->
+    <h2>{{cat.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{cat.id}}</div>
+    <div>
+        <label> name:
+            <input [(ngModel)]="cat.name" placeholder="enter a name" />
+        </label>
+    </div>
+    <button (click)="goBack()">Go Back!</button>
+    <button (click)="save()">Save!</button>
+</div>
